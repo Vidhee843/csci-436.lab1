@@ -1,0 +1,9 @@
+from pyspark import SparkContext
+
+sc = SparkContext("local", "WordCount App")
+lines = sc.textFile("s3://your-bucket-name/your-folder/your-text-file.txt")
+
+# Continue with your WordCount logic...
+
+# Save the result to S3
+result.saveAsTextFile("s3://your-bucket-name/output/")
